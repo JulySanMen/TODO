@@ -1,4 +1,5 @@
-import {TodoCounetr} from './TodoCounter';
+import {TodoCounter} from './TodoCounter';
+import {TodoFilter} from './TodoFilter';
 import './App.css';
 
 function App() {
