@@ -3,10 +3,16 @@ import {TodoFilter} from './TodoFilter';
 import {TodoList} from './TodoList';
 import {TodoItem} from './TodoItem';
 import { CreateTodoButton } from './CreateTodoButton';
+import React from 'react';
 import './App.css';
 
 const defaultTodos = [
-  {text: 'Cortar Cebolla', completed}
+  {text: 'Cortar Cebolla', completed: true},
+  {text: 'Tomar el curso', completed: false},
+  {text: 'Llorar con la llorona', completed: false},
+  {text: 'Cortar Cebolla', completed: false},
+  {text: 'Cortar Cebolla', completed: false},
+
 ];
 
 function App() {
@@ -16,9 +22,7 @@ function App() {
       <TodoFilter/>
 
       <TodoList>
-        <TodoItem />
-        <TodoItem />
-        <TodoItem />
+        {defaultTodos.map(todo =>(<TodoItem/>))}
       </TodoList>
 
       <CreateTodoButton/> 
