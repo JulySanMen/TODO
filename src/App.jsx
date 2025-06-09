@@ -1,6 +1,7 @@
 import {TodoCounter} from './TodoCounter';
 import {TodoFilter} from './TodoFilter';
 import {TodoList} from './TodoList';
+import {TodoItem} from './TodoItem';
 import './App.css';
 
 function App() {
@@ -15,20 +16,11 @@ function App() {
         <TodoItem />
       </TodoList>
 
-      {/* <CreateTodoButton/> */}
+      <CreateTodoButton/> 
       
     </div>
   );
 }
 
-function TodoItem() {
-  return (
-    <li>
-      <span>V</span>
-      <p>Llorar con la Llorona</p>
-      <span>X</span>
-    </li>
-  );
-}
 
 export default App;
