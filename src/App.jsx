@@ -5,6 +5,10 @@ import {TodoItem} from './TodoItem';
 import { CreateTodoButton } from './CreateTodoButton';
 import './App.css';
 
+const defaultTodos = [
+  {text: 'Cortar Cebolla', completed}
+];
+
 function App() {
   return (
     <React.Fragment>
