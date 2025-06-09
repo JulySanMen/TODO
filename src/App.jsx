@@ -7,7 +7,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <React.Fragment>
       <TodoCounter completed={16} total={25}/>
       <TodoFilter/>
 
@@ -19,7 +19,7 @@ function App() {
 
       <CreateTodoButton/> 
       
-    </div>
+    </React.Fragment>
   );
 }
 
