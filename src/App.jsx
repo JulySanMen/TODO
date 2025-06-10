@@ -11,7 +11,7 @@ const defaultTodos = [
   {text: 'Tomar el curso', completed: false},
   {text: 'Llorar con la llorona', completed: false},
   {text: 'Cortar Cebolla', completed: false},
-  {text: 'Cortar Cebolla', completed: false},
+  {text: 'Cortar Cebolla', completed: },
 
 ];
 
