@@ -22,7 +22,12 @@ function App() {
       <TodoFilter/>
 
       <TodoList>
-        {defaultTodos.map(todo =>(<TodoItem/>))}
+        {defaultTodos.map(todo =>(<TodoItem 
+        key={todo.text} 
+        text={todo.text}
+        completed={todo.completed}
+          />
+          ))}
       </TodoList>
 
       <CreateTodoButton/> 
