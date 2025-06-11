@@ -1,5 +1,9 @@
 const estilos = {
   backgroundColor: 'cyan',
+  fontSize: '30px',
+  textAlign: 'center',
+  margin:0,
+  padding:'48px'
 }
 
 function TodoCounter({total, completed}) {
