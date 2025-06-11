@@ -1,6 +1,5 @@
 import './TodoCounter.css';
 
-
 /*  const estilos = {
   backgroundColor: 'cyan',
   fontSize: '30px',
@@ -12,7 +11,7 @@ import './TodoCounter.css';
 function TodoCounter({total, completed}) {
   return (
     <h2 /*style={estilos}*/>
-      Has completado {completed} de {total} TODOs</h2>
+      Has completado {completed} de {total} TODOS</h2>
   );
 }
 
