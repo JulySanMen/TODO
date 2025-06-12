@@ -1,9 +1,41 @@
-.TodoItem{
+.TodoItem {
     background: #f9fafb;
-    padding:1 rem;
+    padding: 1rem;
     margin-bottom: 0.75rem;
     border-radius: 0.5rem;
     display: flex;
     align-items: center;
-    transition: background 0.2s;
-}
+    justify-content: space-between;
+    transition: background 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  
+  .TodoItem:hover {
+    background: #eef1f4;
+  }
+  
+  .TodoItem-check,
+  .TodoItem-delete {
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+    color: #4caf50;
+    user-select: none;
+  }
+  
+  .TodoItem-delete {
+    color: #e53935;
+  }
+  
+  .TodoItem-text {
+    flex: 1;
+    margin: 0 1rem;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .TodoItem-completed .TodoItem-text {
+    text-decoration: line-through;
+    color: #aaa;
+  }
+  
