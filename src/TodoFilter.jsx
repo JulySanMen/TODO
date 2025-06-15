@@ -1,6 +1,11 @@
+import './TodoFilter.css';
+
 function TodoFilter (){
     return (
-        <input placeholder="Cortar Cebolla"/>
+        <input
+        placeholder="Cortar cebolla"
+        className="TodoFilter"
+      />
     );
 }
 
