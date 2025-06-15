@@ -1,8 +1,10 @@
-function TodoList (props){
+import './TodoList.css'
+
+function TodoList ({children}) {
     return(
-        <ul>
-            {props.children}  
-        </ul>
+        <ul className="TodoList">
+        {children}
+      </ul>
     );
 }
 export {TodoList};
