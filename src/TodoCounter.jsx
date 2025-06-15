@@ -10,8 +10,9 @@ import './TodoCounter.css';
 
 function TodoCounter({total, completed}) {
   return (
-    <h2 /*style={estilos}*/>
-      Has completado {completed} de {total} TODOS</h2>
+    <h1 className="TodoCounter">
+      Has completado <span>{completed}</span> de <span>{total}</span> TODOs
+    </h1>
   );
 }
 
