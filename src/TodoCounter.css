@@ -1,11 +1,22 @@
 .TodoCounter {
-    font-size: 24px;
-    text-align: center;
-    margin: 0;
-    padding: 48px;
-    font-weight: normal;
-  }
-  
-  .TodoCounter span {
-    font-weight: bold;
-  }
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 2rem 0;
+  padding: 2rem;
+  font-weight: 400;
+  background: linear-gradient(135deg, #f0f4ff, #e0ecff);
+  color: #1e293b;
+  border-radius: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s ease;
+}
+
+.TodoCounter:hover {
+  transform: scale(1.02);
+}
+
+.TodoCounter span {
+  font-weight: 700;
+  color: #2563eb;
+}
