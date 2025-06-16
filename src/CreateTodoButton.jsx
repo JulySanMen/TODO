@@ -1,11 +1,11 @@
 import './CreateTodoButton.css';
 
-function CreateTodoButton(){
-    return (
-        <button className='CreateTodoButton'>
-            + Add Task
-        </button>
-    );
+function CreateTodoButton() {
+  return (
+    <button className="CreateTodoButton">
+      +
+    </button>
+  );
 }
 
-export {CreateTodoButton};
+export { CreateTodoButton };
