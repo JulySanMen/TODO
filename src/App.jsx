@@ -12,7 +12,7 @@ const defaultTodos = [
   { text: 'Tomar el curso', completed: false },
   { text: 'Llorar con la llorona', completed: false },
   { text: 'Hacer comits', completed: false },
-  { text: 'Comer bien ', completed: false },
+  { text: 'Comer bien ', completed: false }, 
 ];
 
 function App() {
