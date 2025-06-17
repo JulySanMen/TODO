@@ -16,7 +16,7 @@
   transform: scale(1.02); 
 }
 
-.TodoCounter span {
+.TodoCounter span { 
   font-weight: 700;
   color: #2563eb;
 }
