@@ -9,7 +9,7 @@ import './App.css';
 // ✅ debe estar aquí
 const defaultTodos = [
   { text: 'Cortar Cebolla', completed: true },
-  { text: 'Tomar el curso', completed: false },
+  { text: 'Tomar el curso', completed: true},
   { text: 'Llorar con la llorona', completed: false },
   { text: 'Hacer comits', completed: false },
   { text: 'Comer bien ', completed: false }, 
