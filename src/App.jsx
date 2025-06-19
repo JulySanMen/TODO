@@ -6,7 +6,7 @@ import { CreateTodoButton } from './CreateTodoButton';
 import React from 'react';
 import './App.css';
 
-// ✅ debe estar aquí
+
 const defaultTodos = [
   { text: 'Cortar Cebolla', completed: true },
   { text: 'Tomar el curso', completed: true},
@@ -16,12 +16,30 @@ const defaultTodos = [
 ];
 
 function App() {
+  //Etados derivados: a partir de un estado podemos hacer calculos
+  const [todos,setTodos] = React.useState(defaultTodos);
+
+  const [searchValue, setSearchValue] = React.useState('');
+
+  const searchedTodos = todos.filter(
+    (todo)=>{
+      todo.text.includes(searchValue)
+    }
+  )
+
+  const completedTodos= todos.filter(todo => !!todo.completed).length;
+  const totalTodos = todos.length;
+  console.log('Los usuarios buscan todos de '+ searchValue);
+
   return (
     <div className="TodoAppContainer">
-      <TodoCounter completed={16} total={25} />
-      <TodoFilter />
+      <TodoCounter completed={completedTodos} total={totalTodos} />
+      <TodoFilter 
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+      />
       <TodoList>
-        {defaultTodos.map(todo => (
+        {searchedTodos.map(todo => (
           <TodoItem
             key={todo.text}
             text={todo.text}
