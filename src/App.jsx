@@ -23,7 +23,10 @@ function App() {
 
   const searchedTodos = todos.filter(
     (todo)=>{
-      return todo.text.includes(searchValue);
+      const todoText = todo.text.toLowerCase();
+      const searchText = searchValue.toLowerCase();
+
+      return todoText.includes(searchText);
     }
   )
 
