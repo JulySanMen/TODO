@@ -1,14 +1,18 @@
+import React from 'react';
 import './TodoFilter.css';
 
 function TodoFilter() {
+  //estado no solo se consume se actuliza 
+  const [searchValue, setSearchValue] = React.useState('');
+  
+  console.log('Los usuarios buscan todos de  ')
   return (
     <input
       placeholder="Buscar tareas..."
       className="TodoFilter"
+      value={searchValue}
       onChange={(event)=>{
-        console.log('escribiste en el filter ');
-        console.log(event);
-        console.log(event.target.value);
+        setSearchValue(event.target.value);
       }}
     />
   );
