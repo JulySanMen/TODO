@@ -10,7 +10,7 @@ import './App.css';
 const defaultTodos = [
   { text: 'Cortar Cebolla', completed: true },
   { text: 'Tomar el curso', completed: true},
-  { text: 'Llorar con la llorona', completed: false },
+  { text: 'Llorar con la llorona', completed:true },
   { text: 'Hacer comits', completed: false },
   { text: 'Comer bien ', completed: false }, 
 ];
@@ -30,9 +30,9 @@ function App() {
     }
   )
 
-  const completedTodos= todos.filter(todo => !!todo.completed).length;
-  const totalTodos = todos.length;
-  console.log('Los usuarios buscan todos de '+ searchValue);
+  //const completedTodos= todos.filter(todo => !!todo.completed).length;
+  //const totalTodos = todos.length;
+  //console.log('Los usuarios buscan todos de '+ searchValue);
 
   return (
     <div className="TodoAppContainer">
@@ -47,6 +47,7 @@ function App() {
             key={todo.text}
             text={todo.text}
             completed={todo.completed}
+            onComplete={completeTodo}
           />
         ))}
       </TodoList>
