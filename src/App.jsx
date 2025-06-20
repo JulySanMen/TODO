@@ -13,6 +13,7 @@ const defaultTodos = [
   { text: 'Llorar con la llorona', completed:true },
   { text: 'Hacer comits', completed: false },
   { text: 'Comer bien ', completed: false }, 
+  
 ];
 
 function App() {
@@ -42,7 +43,7 @@ function App() {
     newTodos[todoIndex].completed = true;
     setTodos(newTodos);
   }
-  
+
   const deleteTodo = (text)=>{
     const newTodos = [...todos];
     const todoIndex = newTodos.findIndex(
