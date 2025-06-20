@@ -30,9 +30,18 @@ function App() {
     }
   )
 
-  //const completedTodos= todos.filter(todo => !!todo.completed).length;
-  //const totalTodos = todos.length;
+  const completedTodos= todos.filter(todo => !!todo.completed).length;
+  const totalTodos = todos.length;
   //console.log('Los usuarios buscan todos de '+ searchValue);
+
+  const completeTodo = (text)=>{
+    const newTodos = [...todos];
+    const todoIndex = newTodos.findIndex(
+      (todo) => todo.text == text
+    );
+    newTodos[todoIndex].completed = true;
+    setTodos(newTodos);
+  }
 
   return (
     <div className="TodoAppContainer">
