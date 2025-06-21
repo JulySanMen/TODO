@@ -1,4 +1,4 @@
-import './TodoItem.css';
+import "./TodoItem.css";
 import { LiaTimesSolid } from "react-icons/lia";
 
 function TodoItem(props) {
@@ -13,10 +13,7 @@ function TodoItem(props) {
       <p className={`TodoItem-p ${props.completed && "TodoItem-p--complete"}`}>
         {props.text}
       </p>
-      <span
-        className="Icon Icon-delete"
-        onClick={props.onDelete}
-      >
+      <span className="Icon Icon-delete" onClick={props.onDelete}>
         <LiaTimesSolid />
       </span>
     </li>
