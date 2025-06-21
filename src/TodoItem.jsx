@@ -17,7 +17,7 @@ function TodoItem(props) {
         className="Icon Icon-delete"
         onClick={props.onDelete}
       >
-        
+        <LiaTimesSolid />
       </span>
     </li>
   );
