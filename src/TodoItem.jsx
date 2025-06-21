@@ -1,4 +1,5 @@
 import './TodoItem.css';
+import { LiaTimesSolid } from "react-icons/lia";
 
 function TodoItem(props) {
   return (
@@ -7,7 +8,7 @@ function TodoItem(props) {
         className={`Icon Icon-check ${props.completed && "Icon-check--active"}`}
         onClick={props.onComplete}
       >
-        V
+        <LiaTimesSolid />
       </span>
       <p className={`TodoItem-p ${props.completed && "TodoItem-p--complete"}`}>
         {props.text}
