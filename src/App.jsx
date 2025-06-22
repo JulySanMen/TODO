@@ -7,14 +7,14 @@ import React from 'react';
 import './App.css';
 
 
-const defaultTodos = [
-  { text: 'Cortar Cebolla', completed: true },
-  { text: 'Tomar el curso', completed: true},
-  { text: 'Llorar con la llorona', completed:true },
-  { text: 'Hacer comits', completed: false },
-  { text: 'Comer bien ', completed: false }, 
+// const defaultTodos = [
+//   { text: 'Cortar Cebolla', completed: true },
+//   { text: 'Tomar el curso', completed: true},
+//   { text: 'Llorar con la llorona', completed:true },
+//   { text: 'Hacer comits', completed: false },
+//   { text: 'Comer bien ', completed: false }, 
   
-];
+// ];
 
 function App() {
   //Etados derivados: a partir de un estado podemos hacer calculos
