@@ -1,6 +1,6 @@
 import "./TodoItem.css";
 import { LiaTimesSolid } from "react-icons/lia";
-import { LiaCheckSolid } from "react-icons/lia";
+import { LiaCheckSolid } from "react-icons/lia"; 
 
 function TodoItem(props) {
   return (
