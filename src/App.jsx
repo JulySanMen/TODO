@@ -18,7 +18,6 @@ import './App.css';
 // localStorage.setItem('TODOS_V1',defaultTodos);
 //localStorage.removeItem('TODOS_V1');
 
-
 function App() {
   let parsedTodos = localStorage.getItem('TODOS_V1');
   //Etados derivados: a partir de un estado podemos hacer calculos
