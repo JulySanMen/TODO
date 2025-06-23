@@ -3,7 +3,7 @@ import { LiaTimesSolid } from "react-icons/lia";
 import { LiaCheckSolid } from "react-icons/lia"; 
 
 function TodoItem(props) {
-  return (
+  return ( 
     <li className="TodoItem">
       <span
         className={`Icon Icon-check ${props.completed && "Icon-check--active"}`}
