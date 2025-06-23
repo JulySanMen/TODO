@@ -6,7 +6,7 @@ function TodoFilter({
   setSearchValue,
 }) {
   //estado no solo se consume se actuliza 
-  
+
   return (
     <input
       placeholder="Buscar tareas..."
