@@ -14,7 +14,6 @@ import './App.css';
 //   { text: 'Comer bien ', completed: false }, 
   
 // ];
-
 // localStorage.setItem('TODOS_V1',defaultTodos);
 //localStorage.removeItem('TODOS_V1');
 
