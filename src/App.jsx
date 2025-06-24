@@ -19,9 +19,16 @@ import './App.css';
 
 function App() {
   const localStorageTodos = localStorage.getItem('TODOS_V1');
-const parsedTodos = localStorageTodos ? JSON.parse(localStorageTodos) : [];
-  //Etados derivados: a partir de un estado podemos hacer calculos
-  const [todos,setTodos] = React.useState(parsedTodos);
+let parsedTodos = [];
+try {
+  parsedTodos = localStorageTodos ? JSON.parse(localStorageTodos) : [];
+} catch (error) {
+  console.error('Error parsing TODOS_V1 from localStorage:', error);
+  parsedTodos = [];
+}
+
+// Estados derivados
+const [todos, setTodos] = React.useState(parsedTodos);
  
   const [searchValue, setSearchValue] = React.useState('');
 
