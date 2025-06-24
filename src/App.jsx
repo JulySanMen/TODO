@@ -20,7 +20,7 @@ import './App.css';
 function App() {
   const localStorageTodos = localStorage.getItem('TODOS_V1');
 
-  let parsedTodos = JSON.parse(localStorageTodos)
+  let parsedTodos; //= JSON.parse(localStorageTodos)
   //Etados derivados: a partir de un estado podemos hacer calculos
   const [todos,setTodos] = React.useState(parsedTodos);
  
@@ -39,7 +39,10 @@ function App() {
   const totalTodos = todos.length;
   //console.log('Los usuarios buscan todos de '+ searchValue);
 
-  const saveTodos = ()
+  const saveTodos = (newTodos) =>{
+    localStorage.setItem('TODOS_V1', JSON.stringify(newTodos));
+    setTodos(newTodos);
+  };
 
   const completeTodo = (text)=>{
     const newTodos = [...todos];
@@ -47,7 +50,7 @@ function App() {
       (todo) => todo.text == text
     );
     newTodos[todoIndex].completed = true;
-    setTodos(newTodos);
+    saveTodos(newTodos);
   }
 
   const deleteTodo = (text)=>{
@@ -56,7 +59,7 @@ function App() {
       (todo) => todo.text == text
     );
     newTodos.splice(todoIndex,1);
-    setTodos(newTodos);
+    saveTodos(newTodos);
   }
 
   return (
