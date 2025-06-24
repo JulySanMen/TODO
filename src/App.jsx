@@ -21,7 +21,7 @@ function App() {
   let parsedTodos = localStorage.getItem('TODOS_V1');
   //Etados derivados: a partir de un estado podemos hacer calculos
   const [todos,setTodos] = React.useState(parsedTodos);
-
+ 
   const [searchValue, setSearchValue] = React.useState('');
 
   const searchedTodos = todos.filter(
