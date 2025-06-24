@@ -18,7 +18,9 @@ import './App.css';
 //localStorage.removeItem('TODOS_V1');
 
 function App() {
-  let parsedTodos = localStorage.getItem('TODOS_V1');
+  const localStorage = localStorage.getItem('TODOS_V1');
+
+  let parsedTodos = JSON
   //Etados derivados: a partir de un estado podemos hacer calculos
   const [todos,setTodos] = React.useState(parsedTodos);
  
