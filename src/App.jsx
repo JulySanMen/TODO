@@ -18,9 +18,9 @@ import './App.css';
 //localStorage.removeItem('TODOS_V1');
 
 function App() {
-  const localStorage = localStorage.getItem('TODOS_V1');
+  const localStorageTodos = localStorage.getItem('TODOS_V1');
 
-  let parsedTodos = JSON
+  let parsedTodos = JSON.parse(localStorageTodos)
   //Etados derivados: a partir de un estado podemos hacer calculos
   const [todos,setTodos] = React.useState(parsedTodos);
  
@@ -38,6 +38,8 @@ function App() {
   const completedTodos= todos.filter(todo => !!todo.completed).length;
   const totalTodos = todos.length;
   //console.log('Los usuarios buscan todos de '+ searchValue);
+
+  const saveTodos = ()
 
   const completeTodo = (text)=>{
     const newTodos = [...todos];
