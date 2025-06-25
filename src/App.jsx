@@ -19,19 +19,16 @@ import './App.css';
 
 function App() {
   const localStorageTodos = localStorage.getItem('TODOS_V1');
+let parsedTodos = [];
+try {
+  parsedTodos = localStorageTodos ? JSON.parse(localStorageTodos) : [];
+} catch (error) {
+  console.error('Error parsing TODOS_V1 from localStorage:', error);
+  parsedTodos = [];
+}
 
-  let parsedTodos =[];
-  
-  if (!localStorageTodos) {
-    localStorage.setItem('TODOS_V1', JSON.stringify([]));
-    parsedTodos = [];
-  } else {
-    parsedTodos = JSON.parse(localStorageTodos);
-  }
-  
-  const [todos, setTodos] = React.useState(parsedTodos);
-  const [searchValue, setSearchValue] = React.useState('');
-
+const [todos, setTodos] = React.useState(parsedTodos);
+const [searchValue, setSearchValue] = React.useState('');
   const completedTodos = todos.filter(
     todo => !!todo.completed
   ).length;
