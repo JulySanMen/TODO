@@ -20,7 +20,7 @@ import './App.css';
 function App() {
   const localStorageTodos = localStorage.getItem('TODOS_V1');
 
-  let parsedTodos;
+  let parsedTodos =[];
   
   if (!localStorageTodos) {
     localStorage.setItem('TODOS_V1', JSON.stringify([]));
@@ -75,7 +75,7 @@ function App() {
         completed={completedTodos}
         total={totalTodos} 
       />
-      <TodoSearch
+      <TodoFilter
         searchValue={searchValue}
         setSearchValue={setSearchValue}
       />
